@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Bot</title>
+</head>
+<body>
+    <h2>💬 Talk to Your Personalized Bot</h2>
+
+    <label>Select Trained Voice:</label>
+    <select id="voice_id">
+        {% for voice in voices %}
+            <option value="{{ voice }}">{{ voice }}</option>
+        {% endfor %}
+    </select><br><br>
+
+    <label>Choose Emotion:</label>
+    <select id="emotion">
+        <option value="neutral">Neutral</option>
+        <option value="funny">Funny</option>
+        <option value="serious">Serious</option>
+        <option value="sarcastic">Sarcastic</option>
+    </select><br><br>
+
+    <!-- Added Template Selection -->
+    <label for="prompt-template">Choose Conversation Style:</label>
+    <select id="prompt-template" name="prompt-template">
+        <option value="assistant">Assistant</option>
+        <option value="friend">Friend</option>
+        <option value="tutor">Tutor</option>
+    </select><br><br>
+
+    <button onclick="startRecording()">🎙 Start Recording</button>
+    <button onclick="stopRecording()">🛑 Stop & Send</button>
+
+    <audio id="responseAudio" controls></audio><br><br>
+
+    <a href="/">⬅ Back to Home</a>
+
+    <!-- Link to external JavaScript file -->
+    <script src="/static/js/chat.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Train a Voice Model</title>
+</head>
+<body>
+    <h2>🎤 Train a Custom Voice Model</h2>
+    <form action="/train-model" method="POST" enctype="multipart/form-data">
+        <label>Model Name:</label><br>
+        <input type="text" name="model_name" required><br><br>
+
+        <label>Upload Voice Samples:</label><br>
+        <input type="file" name="voice_samples" multiple required><br><br>
+
+        <input type="submit" value="Train & Save">
+    </form>
+    <br><a href="/">⬅ Back to Home</a>
+</body>
+</html>
